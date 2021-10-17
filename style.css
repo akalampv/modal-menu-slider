@@ -36,7 +36,7 @@ nav {
     width: 20rem;
     height: 100vh;
     z-index: 100;
-    /*transform: translateX(-100%);*/
+    transform: translateX(-100%);
 }
 
 nav .logo {
@@ -71,4 +71,109 @@ nav ul li a {
 
 nav ul li:hover {
     text-decoration: underline;
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 130%;
+    position: relative;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+header p {
+    margin: 3rem 0;
+}
+
+button,
+input[type="submit"] {
+    background: var(--secondary-color);
+    border: 0;
+    border-radius: .5rem;
+    color: #fff;
+    cursor: pointer;
+    padding: .8rem 1.2rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+.toggle {
+    background: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.cta-btn {
+    padding: 1.2rem 3rem;
+    font-size: 2rem;
+}
+
+.container {
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 80rem;
+}
+
+.modal-container {
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .3);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    width: 40rem;
+}
+
+.modal-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.modal-header h3 {
+    border-bottom: .1rem solid #333;
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.modal-form div {
+    margin: 1.5rem 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.form-input {
+    padding: .8rem;
+    width: 100%;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
