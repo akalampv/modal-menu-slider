@@ -6,6 +6,7 @@
     --modal-duration: 1s;
     --primary-color: #30336b;
     --secondary-color: #be2edd;
+    --nav-width: 20rem;
 }
 
 *,
@@ -24,6 +25,11 @@ body {
     box-sizing: border-box;
     font-size: 1.6rem;
     font-family: 'Lato', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav {
+    transform: translateX(var(--nav-width));
 }
 
 nav {
@@ -33,7 +39,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20rem;
+    width: var(--nav-width);
     height: 100vh;
     z-index: 100;
     transform: translateX(-100%);
@@ -129,6 +135,10 @@ button:focus {
     bottom: 0;
 }
 
+.modal-container.show-modal {
+    display: block;
+}
+
 .modal {
     background: #fff;
     border-radius: .5rem;
@@ -140,6 +150,8 @@ button:focus {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 40rem;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -176,4 +188,14 @@ button:focus {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
